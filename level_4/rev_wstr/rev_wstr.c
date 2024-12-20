@@ -29,7 +29,7 @@ int main(int ac, char **av)
             while (start >= 0 && av[1][start] != ' ' && av[1][start] != '\t')
                 start--;
             write(1, &av[1][start + 1], end - start);
-            if (end > 0)
+            if (end > 0 && av[1][start])
                 write(1, " ", 1);
             end = start - 1;
         }
