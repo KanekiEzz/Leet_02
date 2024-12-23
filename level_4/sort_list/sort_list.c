@@ -2,25 +2,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-t_list *sort_list(t_list *lst, int (*cmp)(int, int))
-{
-  int swap;
-  t_list *start;
+#include <unistd.h>
+#include "list.h"
 
-  start = lst;
-  while (lst != NULL && lst->next != NULL)
-  {
-    if ((*cmp)(lst->data, lst->next->data) == 0)
-    {
-      swap = lst->data;
-      lst->data = lst->next->data;
-      lst->next->data = swap;
-      lst = start;
-    }
-    else
-      lst = lst->next;
-  }
-  return start;
+t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
+{
+	int *swap;
+	int tmp;
+
+	tmp = lst;
+	while (lst->next != NULL)
+	{
+		if ((*cmp)(lst->data, lst->next->data))
+		{
+			tmp = lst->data;
+			lst->data = lst->next->data;
+			lst->next->data = tmp;
+			tmp = lst;
+		}
+		else
+			lst = lst->next;
+	}
+	tmp = lst;
+	return lst;
 }
 
 int ascending(int a, int b)
