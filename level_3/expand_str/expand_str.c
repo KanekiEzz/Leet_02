@@ -1,33 +1,25 @@
 #include <unistd.h>
 
-int _check(char c)
+int main (int ac, char **av)
 {
-    if (c == ' ' || c == '\t')
-        return 0;
-    return 1;
-}
-
-int main(int ac, char **av)
-{
-    int i;
-    int flag;
-    if (ac == 2)
-    {
-        while (_check(av[1][i]) == 0)
-            i++;
-        while (av[1][i])
-        {
-            if (_check(av[1][i]) == 0)
-                flag = 1;
-            if (!(_check(av[1][i]) == 0))
-            {
-                if (flag == 1)
-                    write(1, "   ", 3);
-                flag = 0;
-                write(1, &av[1][i], 1);
-            }
-            i++;
-        }
-    }
-    write(1, "\n", 1);
+	if (ac == 2)
+	{
+		int i = 0;
+		int flags = 1;
+		char *str = av[1];
+		while (str[i])
+		{
+			while (str[i] && (str[i] == ' ' || str[i] == '\t'))
+				i++;
+			if (str[i])
+			{
+				if (!flags)
+					write(1, "   ", 3);
+				flags = 0;
+				while (str[i] && str[i] != ' ' && str[i] != '\t')
+					write(1, &str[i++], 1);
+			}
+		}
+	}
+	write(1, "\n", 1);
 }
