@@ -16,7 +16,7 @@ int *ft_range(int start, int end)
     {
         while (i <= len)
         {
-            ptr[i] = start++;
+            ptr[i] = start--;
             i++;
         }
     }
