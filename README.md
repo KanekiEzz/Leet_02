@@ -82,7 +82,7 @@ Can be any of the 10 Functions/Programs Below:
 7. [rev_wstr](https://github.com/pasqualerossi/42-School-Exam-Rank-02/blob/main/Level%204/rev_wstr/rev_wstr.c)
 8. [rostring](https://github.com/pasqualerossi/42-School-Exam-Rank-02/blob/main/Level%204/rostring/rostring.c)
 9. [sort_int_tab](https://github.com/pasqualerossi/42-School-Exam-Rank-02/blob/main/Level%204/sort_int_tab/sort_int_tab.c)
-10. [sort_list](https://github.com/pasqualerossi/42-School-Exam-Rank-02/tree/main/Level%204/sort_list)
+10. [sort_list](https://github.com/KanekiEzz/1337_Exam_42/blob/main/level_4/sort_list/subject.en.txt)
 </td></tr></table>
 
 <br>
@@ -142,14 +142,3 @@ When you are ready to sumbit your function/program, go into Rendu and push the f
 
 <br>
 
-## Exam IDE
-
-> [!NOTE]
-You should be able to use both VSCode and Vim in the exam.
-
-[![My Skills](https://skillicons.dev/icons?i=vscode,vim)](https://skillicons.dev)
-
-<br>
-
-## Exam Practice Tool
-[Link To The Tool](https://github.com/JCluzet/42_EXAM)
