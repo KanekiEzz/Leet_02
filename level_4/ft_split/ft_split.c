@@ -10,14 +10,14 @@ char	**ft_split(char *str)
 	int j = 0;
 	int k = 0;
 	char **ptr;
-	if (!(ptr = malloc(sizeof(char *) * (2048))))
+	if (!(ptr = malloc(sizeof(char *) * (100))))
 		return NULL;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
 		i++;
 	while (str[i])
 	{
 		j = 0;
-		if (!(ptr[k] = malloc(4096)))
+		if (!(ptr[k] = malloc(100)))
 			return NULL;
 		while(str[i] && str[i] != ' ' && str[i] != '\n' && str[i] != '\t')
 			ptr[k][j++] = str[i++];
